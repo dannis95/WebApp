@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Ask AI</title>
+  <style>
+  </style>
+
+
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Ask AI</h1>
+</div>
+
+
+<div class="nav">
+    <a href="http://127.0.0.1:5500/html/test.html">Home</a>
+    <a href= http://127.0.0.1:5500/html/index.html> About </a>
+    <a href="http://127.0.0.1:5500/html/software.html">Software</a>
+  </div>
+
+<div class="content">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero's Journey Chatbot</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+
+      #chatbox {
+          border: 1px solid #ccc;
+          padding: 10px;
+          max-height: 300px;
+          overflow-y: scroll;
+      }
+
+      #input-container {
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+
+<div id="chatbox"></div>
+
+<div id="input-container">
+  <input type="text" id="user-input" placeholder="Type your question...">
+  <button onclick="getResponse()">Send</button>
+</div>
+
+<script>
+  const chatbox = document.getElementById('chatbox');
+  const userInput = document.getElementById('user-input');
+
+  function appendMessage(sender, message) {
+      const messageElement = document.createElement('p');
+      messageElement.textContent = `${sender}: ${message}`;
+      chatbox.appendChild(messageElement);
+  }
+
+  function getResponse() {
+      const userQuestion = userInput.value;
+      appendMessage('You', userQuestion);
+
+      // Simple responses based on user input
+      let response = "Ask me 'What Is The Hero's Journey' to find out or ask 'What are the stages' to find out even more, or ask 'tell me more' to get a more in depth answer or you can ask 'where is it useful' to find where you can find the Hero's Journey";
+
+      if (userQuestion.toLowerCase().includes('hero')) {
+          response = "The Hero's Journey is a narrative structure outlined by Joseph Campbell.";
+      }
+      
+
+      if (userQuestion.toLowerCase().includes('stages')) {
+          response = "The Hero's Journey typically involves stages like the Call to Adventure, Crossing the Threshold, and the Resurrection.";
+      }
+
+      if (userQuestion.toLowerCase().includes('more')) {
+          response = "The Hero's Journey consists of several stages, including:\n" +
+                "1. The Call to Adventure\n" +
+                "2. Refusal of the Call\n" +
+                "3. Meeting the Mentor\n" +
+                "4. Crossing the Threshold\n" +
+                "5. Tests, Allies, and Enemies\n" +
+                "6. Approach to the Inmost Cave\n" +
+                "7. The Ordeal\n" +
+                "8. Reward (Seizing the Sword)\n" +
+                "9. The Road Back\n" +
+                "10. Resurrection\n" +
+                "11. Return with the Elixir";
+      }
+      if (userQuestion.toLowerCase().includes('where')) {
+            response = "The Hero's Journey is considered universal because it reflects common elements of human experiences, struggles, and personal growth. " +
+                "These stages are found in myths, folklore, and stories from various cultures.";
+        }
+      
+
+      appendMessage('Chatbot', response);
+      userInput.value = '';
+  }
+</script>
+
+
+</div>
+
+<div class="footer">
+  <p>Contact Us At pathfinderhelp@gmail.com Or Call One Of Our Reps At 1-800-592-3821</p>
+</div>
+
+</body>
+</html>
