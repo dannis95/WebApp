@@ -19,7 +19,7 @@
 
 
 <div class="nav">
-    <a href="http://127.0.0.1:5500/html/home.html">Home</a>
+  <a href="http://127.0.0.1:5500/html/home.html">Home</a>
     <a href="http://127.0.0.1:5500/html/donation.html">Donate</a>
     <a href="http://127.0.0.1:5500/html/software.html">Software</a>
   </div>
@@ -32,11 +32,15 @@
   <style>
       body {
           font-family: Arial, sans-serif;
+          color: rgb(255, 255, 255);
           margin: 20px;
       }
 
       #chatbox {
-          border: 1px solid #ccc;
+        color: black;
+          border: 1px solid #373af0;
+          border-width: 6px;
+          background-color: rgb(255, 255, 255);
           padding: 10px;
           max-height: 300px;
           overflow-y: scroll;
@@ -52,8 +56,8 @@
 <div id="chatbox"></div>
 
 <div id="input-container">
-  <input type="text" id="user-input" placeholder="Type your question...">
-  <button onclick="getResponse()">Send</button>
+<center>  <input type="text" id="user-input" placeholder="Ask questions here!"></center>
+ <center> <button onclick="getResponse()">Send</button> </center>
 </div>
 
 <script>
@@ -68,7 +72,7 @@
 
   function getResponse() {
       const userQuestion = userInput.value;
-      appendMessage('You', userQuestion);
+      appendMessage('You', userQuestion);  
 
       // Simple responses based on user input
       let response = "Ask me 'What Is The Hero's Journey' to find out or ask 'What are the stages' to find out even more, or ask 'tell me more' to get a more in depth answer or you can ask 'where is it useful' to find where you can find the Hero's Journey";
