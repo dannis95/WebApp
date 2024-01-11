@@ -32,14 +32,12 @@ body {
     width: 100%;
   }
 .zoom {
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0);
+  padding: 80px;
+  background-color: rgba(31, 50, 219, 0);
   transition: transform .2s; /* Animation */
-  width: 100px;
-  height: 100px;
-  margin: 1 auto;
-  
+  margin: 3 auto;
+  text-align: center;
 }
 .zoom:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
