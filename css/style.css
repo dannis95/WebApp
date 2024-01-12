@@ -32,8 +32,6 @@ body {
     width: 100%;
   }
 .zoom {
-  padding: 80px;
-  background-color: rgba(31, 50, 219, 0);
   transition: transform .2s; /* Animation */
   margin: 3 auto;
   text-align: center;
