@@ -42,3 +42,10 @@ body {
 .buttonblue{
   background-color: #373af0;
 }
+.linkdiv a {
+  color: rgb(255, 255, 255);
+}
+
+.linkdiv:hover a {
+  color: #373af0;
+}
